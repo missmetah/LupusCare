@@ -1,0 +1,109 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+:root {
+    --lc-primary:    #7C3AED; /* violet principal */
+    --lc-secondary:  #A78BFA; /* violet clair */
+    --lc-accent:     #EDE9FE; /* fond violet très doux */
+    --lc-success:    #059669;
+    --lc-danger:     #DC2626;
+    --lc-text:       #1E1B4B;
+}
+
+body {
+    background-color: #F5F3FF;
+    color: var(--lc-text);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Sidebar */
+.lc-sidebar {
+    width: 260px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #7C3AED 0%, #5B21B6 100%);
+    position: fixed;
+    top: 0; left: 0;
+    padding: 2rem 1rem;
+    z-index: 100;
+}
+
+.lc-sidebar .brand {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.lc-sidebar .nav-link {
+    color: #DDD6FE;
+    border-radius: 10px;
+    padding: .75rem 1rem;
+    margin-bottom: .25rem;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    transition: all .2s;
+}
+
+.lc-sidebar .nav-link:hover,
+.lc-sidebar .nav-link.active {
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+/* Contenu principal */
+.lc-main {
+    margin-left: 260px;
+    padding: 2rem;
+}
+
+/* Navbar top */
+.lc-topbar {
+    background: white;
+    border-bottom: 1px solid #EDE9FE;
+    padding: .75rem 2rem;
+    margin-left: 260px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Cards */
+.lc-card {
+    background: white;
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 2px 12px rgba(124,58,237,0.08);
+    padding: 1.5rem;
+}
+
+.lc-card-stat {
+    border-left: 4px solid var(--lc-primary);
+}
+
+/* Boutons */
+.btn-lc {
+    background: var(--lc-primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: .5rem 1.25rem;
+}
+
+.btn-lc:hover {
+    background: #5B21B6;
+    color: white;
+}
+
+/* Badge statut RDV */
+.badge-pending    { background: #FEF3C7; color: #92400E; }
+.badge-confirmed  { background: #D1FAE5; color: #065F46; }
+.badge-refused    { background: #FEE2E2; color: #991B1B; }
+.badge-completed  { background: #EDE9FE; color: #5B21B6; }
+.badge-cancelled  { background: #F3F4F6; color: #374151; }
